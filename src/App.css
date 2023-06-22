@@ -26,7 +26,7 @@
   padding-top: 20px;
   background: #C6C6C6;
   color: #000000;
-  height: 100vh;
+  height: auto;
   width: 200px;
 }
 
@@ -66,14 +66,12 @@
   font-size: 30px;
 }
 
-.movie-container{
-  width: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-left: 50px;
-  justify-content: space-between;
+.movieContainer{
+  width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-left: 10px;
+  padding-top: 10px;
   
 }
 
@@ -83,6 +81,7 @@
   background-color: antiquewhite;
   color: black;
   margin: 10px;
+  
 }
 
 .movie-title{
