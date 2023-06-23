@@ -1,24 +1,31 @@
-import { useState } from "react"
+import React, { useState } from 'react'
+
+const Badminton = () => {
+    const [leftScore, setleftScore] = useState(0);
+    const [rightScore, setRightScore] = useState(0);
 
 
-function App() {
-    const [score, setScore] = useState(0);
 
-const pointClick = (points) => {
-    setScore(score + points);
+    const clickleft = () => {
+        setleftScore(leftScore + 1);
+    }
+
+    const clickright = () => {
+        setRightScore(rightScore + 1);
+    }
+
+  return (
+    <div>
+        <h1>
+            <p>Score : {leftScore}</p> 
+            <button onClick={clickleft}>Left</button>
+        </h1>
+        <h1>
+            <p style={{display:"flex", gap:".5rem"}}>Score : {rightScore}</p>
+        <button onClick={clickright}>Right</button>
+        </h1>
+    </div>
+  );
 };
 
-return (
-    <div>
-        <h1>Score</h1>
-        <button onClick={() => pointClick(1)}> 1 Point</button>
-        <button onClick={() => pointClick(2)}> 2 Point</button>
-        <button onClick={() => pointClick(3)}> 3 Point</button>
-    </div>
-
-);
-}
-
-
-
-export default Basketball;
+export default Badminton
